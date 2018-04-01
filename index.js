@@ -32,11 +32,12 @@ async function main() {
   ch.consume(STANCHION_QUEUE, async message => {
     const id = message.content.toString();
 
-    matchmake(id).forEach(match => {
+    (await matchmake(id)).forEach(match => {
       console.log('Queueing up', match)
       ch.sendToQueue(RUNNER_QUEUE, Buffer.from(JSON.stringify(match)), {persistent: true})
     })
-  }, {noAck: true})
+    ch.ack(message)
+  }, {noAck: false})
 }
 
 main()
