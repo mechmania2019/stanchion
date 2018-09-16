@@ -1,8 +1,8 @@
 {
   "name": "stanchion",
   "dependencies": {
-    "amqplib": "^0.5.2",
-    "mm-schemas": "mechmania2018/mm-schemas",
-    "mongoose": "^5.0.7"
+    "amqplib": "0.5.2",
+    "mm-schemas": "0.0.1",
+    "mongoose": "5.0.7"
   }
 }

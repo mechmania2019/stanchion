@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-amqplib@^0.5.2:
+amqplib@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/amqplib/-/amqplib-0.5.2.tgz#d2d7313c7ffaa4d10bcf1e6252de4591b6cc7b63"
   dependencies:
@@ -68,6 +68,10 @@ isarray@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
 
+kareem@2.0.5:
+  version "2.0.5"
+  resolved "http://registry.npmjs.org/kareem/-/kareem-2.0.5.tgz#437e1e40f1be304ee21b3e4790eb3a05418b35ca"
+
 kareem@2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/kareem/-/kareem-2.0.6.tgz#011ed59fd718bb147c63141a799fc888cd5a211b"
@@ -80,14 +84,21 @@ lodash@^4.14.0:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
-mm-schemas@mechmania2018/mm-schemas:
-  version "1.0.0"
-  resolved "https://codeload.github.com/mechmania2018/mm-schemas/tar.gz/b15ae41d5b9097d6af8ca6cdce05886c749df28f"
+mm-schemas@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/mm-schemas/-/mm-schemas-0.0.1.tgz#e40a091ff74ae5d22076918f3572eeef52672ae2"
   dependencies:
     mongoose "^5.0.7"
     mongoose-timestamp "^0.6.0"
     uuid "^3.2.1"
     validator "^9.4.1"
+
+mongodb-core@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-3.0.2.tgz#914896092dd45427d9a4f98a7997a0bfb81d163b"
+  dependencies:
+    bson "~1.0.4"
+    require_optional "^1.0.1"
 
 mongodb-core@3.0.4:
   version "3.0.4"
@@ -95,6 +106,12 @@ mongodb-core@3.0.4:
   dependencies:
     bson "~1.0.4"
     require_optional "^1.0.1"
+
+mongodb@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.0.2.tgz#28172302ed4e9388d8091e2cc4618057e6f5debc"
+  dependencies:
+    mongodb-core "3.0.2"
 
 mongodb@3.0.4:
   version "3.0.4"
@@ -111,6 +128,22 @@ mongoose-timestamp@^0.6.0:
   resolved "https://registry.yarnpkg.com/mongoose-timestamp/-/mongoose-timestamp-0.6.0.tgz#da54110ca8e6d4c2b9957a0366836c362ed272be"
   dependencies:
     defaults "^1.0.3"
+
+mongoose@5.0.7:
+  version "5.0.7"
+  resolved "http://registry.npmjs.org/mongoose/-/mongoose-5.0.7.tgz#7c20a3c734ef4e8999f150e5a48e97dfa3f06951"
+  dependencies:
+    async "2.1.4"
+    bson "~1.0.4"
+    kareem "2.0.5"
+    lodash.get "4.4.2"
+    mongodb "3.0.2"
+    mongoose-legacy-pluralize "1.0.2"
+    mpath "0.3.0"
+    mquery "3.0.0"
+    ms "2.0.0"
+    regexp-clone "0.0.1"
+    sliced "1.0.1"
 
 mongoose@^5.0.7:
   version "5.0.12"

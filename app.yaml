@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stanchion
+  labels:
+    app: stanchion
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stanchion
+  template:
+    metadata:
+      labels:
+        app: stanchion
+    spec:
+      containers:
+      - name: stanchion
+        image: gcr.io/mechmania2017/stanchion:latest
+        env:
+          - name: MONGO_URL
+            valueFrom:
+              secretKeyRef:
+                name: creds
+                key: mongo
+          - name: RABBITMQ_URI
+            valueFrom:
+              secretKeyRef:
+                name: creds
+                key: rabbitmq
