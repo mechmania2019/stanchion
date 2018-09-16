@@ -29,6 +29,11 @@ async function main() {
   const ch = await conn.createChannel();
   ch.assertQueue(STANCHION_QUEUE, { durable: true });
   ch.assertQueue(RUNNER_QUEUE, { durable: true });
+  process.on('SIGTERM', async () => {
+    console.log('Got SIGTERM');
+    await ch.close()
+    conn.close()
+  });
 
   console.log(`Listening to ${STANCHION_QUEUE}`);
   ch.consume(
@@ -39,7 +44,7 @@ async function main() {
 
       console.log(`${id} - Matchmaking`);
       (await matchmake(id)).forEach(match => {
-        console.log(`${id} - Queueing up ${match[0]} v ${match[1]}`);
+        console.log(`${id} - Queueing up against ${match[1]}`);
         ch.sendToQueue(RUNNER_QUEUE, Buffer.from(JSON.stringify(match)), {
           persistent: true
         });
