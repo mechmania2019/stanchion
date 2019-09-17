@@ -2,7 +2,7 @@
   "name": "stanchion",
   "dependencies": {
     "amqplib": "0.5.2",
-    "mm-schemas": "0.0.7",
+    "mm-schemas": "0.0.8",
     "mongoose": "5.0.7"
   }
 }
