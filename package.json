@@ -3,6 +3,6 @@
   "dependencies": {
     "amqplib": "0.5.2",
     "mm-schemas": "0.0.9",
-    "mongoose": "5.0.7"
+    "mongoose": "5.7.1"
   }
 }
