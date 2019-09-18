@@ -7,7 +7,7 @@ const amqp = require("amqplib");
 const RABBITMQ_URI = process.env.RABBITMQ_URI || "amqp://localhost";
 const STANCHION_QUEUE = `stanchionQueue`;
 const RUNNER_QUEUE = `runnerQueue`;
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
 
 async function getLatestCompetitiorScripts() {
