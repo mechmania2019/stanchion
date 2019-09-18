@@ -82,10 +82,10 @@ lodash@^4.17.11:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
-mm-schemas@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/mm-schemas/-/mm-schemas-0.0.9.tgz#4e7a6b94c74021546ecdcbfe778772d909413406"
-  integrity sha512-3JbPMnUIKSZGnuiGw+HAWLWw/J80zFuKlgwZiRVESoQN3pf4pZNSRBWHMgLSxygDKVC7ci8f5eJe9EnnIbhS2A==
+mm-schemas@0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/mm-schemas/-/mm-schemas-0.0.10.tgz#69836ad7cf229449e1404a83db6b86a1ff181921"
+  integrity sha512-pNUSjCju/G57s8ERDKjWyjTUg8PIbmZTi39soEvLYA6hqVLke6kJo10hNQSIUd2XY2FypgnvQuzwcTlv8bFbUg==
   dependencies:
     cuid "2.1.6"
     mongoose "5.7.1"
